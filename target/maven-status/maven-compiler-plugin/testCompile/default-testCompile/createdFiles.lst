@@ -1,0 +1,11 @@
+tests\RegisterTest.class
+tests\CartTest.class
+stepdefinitions\LoginSteps.class
+tests\CheckoutTest.class
+com\nopcommerce\AppTest.class
+tests\BaseTest.class
+stepdefinitions\RegisterSteps.class
+tests\LoginTest.class
+tests\ProductTest.class
+runner\TestRunner.class
+runner\FailedTestRunner.class

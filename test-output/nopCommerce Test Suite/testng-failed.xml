@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [nopCommerce Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
+  </listeners>
+  <test thread-count="3" parallel="methods" name="Register Tests(failed)">
+    <classes>
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setUpSuite"/>
+          <include name="testUserRegistrationWithValidCredentials"/>
+          <include name="tearDown"/>
+          <include name="testUserRegistrationWithPasswordMismatch"/>
+          <include name="setUp"/>
+          <include name="testUserRegistrationWithExistingEmail"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
+    </classes>
+  </test> <!-- Register Tests(failed) -->
+  <test thread-count="3" parallel="methods" name="Product Tests(failed)">
+    <classes>
+      <class name="tests.ProductTest">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="testAddSimpleProductToCartFromCategory"/>
+          <include name="setUpSuite"/>
+          <include name="testAddConfigurableProductToCart"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.ProductTest -->
+    </classes>
+  </test> <!-- Product Tests(failed) -->
+  <test thread-count="3" parallel="methods" name="Login Tests(failed)">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setUpSuite"/>
+          <include name="testUserLoginWithInvalidCredentials"/>
+          <include name="testUserLoginWithValidCredentials"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testUserLogout"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+  <test thread-count="3" parallel="methods" name="Cart Tests(failed)">
+    <classes>
+      <class name="tests.CartTest">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setUpSuite"/>
+          <include name="testProceedToCheckoutFromCart"/>
+          <include name="testUpdateProductQuantityByInput"/>
+          <include name="testRemoveProductFromCart"/>
+          <include name="testUpdateProductQuantityUsingArrows"/>
+          <include name="testConfiguredProductInCart"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
+    </classes>
+  </test> <!-- Cart Tests(failed) -->
+  <test thread-count="3" parallel="methods" name="Checkout Tests(failed)">
+    <classes>
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="tearDownSuite"/>
+          <include name="setUpSuite"/>
+          <include name="testCheckoutTermsOfServiceValidation"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testConfiguredProductDetailsInCheckout"/>
+          <include name="testCompleteCheckoutProcessWithConfiguredProduct"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
+    </classes>
+  </test> <!-- Checkout Tests(failed) -->
+</suite> <!-- Failed suite [nopCommerce Test Suite] -->
