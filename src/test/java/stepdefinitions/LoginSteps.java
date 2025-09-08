@@ -43,7 +43,8 @@ public class LoginSteps extends BaseTest {
     
     @When("I click the logout link")
     public void i_click_the_logout_link() {
-        loginPage.clickElement(loginPage.getLogoutLink());
+    	loginPage.clickLogout();
+
     }
     
     @Then("I should see the logout link")

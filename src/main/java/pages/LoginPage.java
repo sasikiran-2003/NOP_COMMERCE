@@ -24,6 +24,9 @@ public class LoginPage extends BasePage {
     
     @FindBy(className = "ico-account")
     private WebElement myAccountLink;
+    
+    @FindBy(id = "Email-error")
+    private WebElement emailError;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -45,26 +48,21 @@ public class LoginPage extends BasePage {
     public String getErrorMessage() {
         return getElementText(errorMessage);
     }
-    
+
+    public String getEmailErrorMessage() {
+        waitForElementToBeVisible(emailError);
+        return emailError.getText().trim();
+    }
+
     public boolean isLogoutDisplayed() {
-        try {
-            return logoutLink.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
+        return logoutLink.isDisplayed();
     }
-    
+
     public boolean isMyAccountDisplayed() {
-        try {
-            return myAccountLink.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-    
-    public WebElement getLogoutLink() {
-        return logoutLink;
+        return myAccountLink.isDisplayed();
     }
 
+    public void clickLogout() {
+        clickElement(logoutLink);
+    }
 }
-

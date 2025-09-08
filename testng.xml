@@ -9,38 +9,27 @@
     
     <test name="Register Tests">
         <classes>
-            <class name="com.nopcommerce.tests.RegisterTest"/>
+            <class name="tests.RegisterTest"/>
         </classes>
     </test>
     
     <test name="Login Tests">
         <classes>
-            <class name="com.nopcommerce.tests.LoginTest"/>
+            <class name="tests.LoginTest"/>
         </classes>
     </test>
     
     <test name="Product Tests">
         <classes>
-            <class name="com.nopcommerce.tests.ProductTest"/>
+            <class name="tests.ProductTest"/>
         </classes>
     </test>
     
     <test name="Cart Tests">
         <classes>
-            <class name="com.nopcommerce.tests.CartTest"/>
+            <class name="tests.CartTest"/>
         </classes>
     </test>
     
-    <test name="Checkout Tests">
-        <classes>
-            <class name="com.nopcommerce.tests.CheckoutTest"/>
-        </classes>
-    </test>
-    
-    <!-- For now, let's disable parallel execution to avoid issues -->
-    <!-- <test name="Cucumber Tests">
-        <classes>
-            <class name="com.nopcommerce.tests.cucumber.runner.TestRunner"/>
-        </classes>
-    </test> -->
+
 </suite>
