@@ -17,7 +17,6 @@ public class Hooks {
         // Clean up any existing processes
         try {
             Runtime.getRuntime().exec("taskkill /f /im chromedriver.exe");
-            Runtime.getRuntime().exec("taskkill /f /im chrome.exe");
             Thread.sleep(2000);
         } catch (Exception e) {
             // Ignore cleanup errors
@@ -68,7 +67,6 @@ public class Hooks {
                 // Force kill processes
                 try {
                     Runtime.getRuntime().exec("taskkill /f /im chromedriver.exe");
-                    Runtime.getRuntime().exec("taskkill /f /im chrome.exe");
                 } catch (Exception ex) {
                     System.err.println("Force cleanup failed: " + ex.getMessage());
                 }
