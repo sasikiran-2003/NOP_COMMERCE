@@ -144,7 +144,7 @@ public class BaseTest {
         if (driver != null) {
             try {
                 driver.manage().deleteAllCookies();
-                driver.quit();
+                driver.close();
             } catch (Exception e) {
                 System.out.println("Error during driver cleanup: " + e.getMessage());
                 // Force kill if needed

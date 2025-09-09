@@ -5,7 +5,7 @@
 
 	<listeners>
 		<listener
-			class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter" />
+			class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter" />
 	</listeners>
 
 	<test name="Register Tests">

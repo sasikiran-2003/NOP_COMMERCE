@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">22 methods,   22 passed</span>
+                    <span class="method-stats">22 methods, 5 failed,   17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful logout&quot;, &quot;User Login&quot;)">runScenario("Successful logout", "User Login")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login&quot;)">runScenario("Successful login with valid credentials", "User Login")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLoginWithEmptyPassword">testLoginWithEmptyPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserLoginWithValidCredentials">testUserLoginWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserLogout">testUserLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +135,11 @@
                       <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
                     <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful registration with valid credentials&quot;, &quot;User Registration&quot;)">runScenario("Successful registration with valid credentials", "User Registration")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with password mismatch should fail&quot;, &quot;User Registration&quot;)">runScenario("Registration with password mismatch should fail", "User Registration")</a> <!-- method navigator-link -->
@@ -113,22 +152,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful registration with valid credentials&quot;, &quot;User Registration&quot;)">runScenario("Successful registration with valid credentials", "User Registration")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Registration with existing email should fail&quot;, &quot;User Registration&quot;)">runScenario("Registration with existing email should fail", "User Registration")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login&quot;)">runScenario("Successful login with valid credentials", "User Login")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful logout&quot;, &quot;User Login&quot;)">runScenario("Successful logout", "User Login")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -144,11 +168,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLoginWithEmptyCredentials">testLoginWithEmptyCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLoginWithEmptyPassword">testLoginWithEmptyPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -169,16 +188,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserLoginWithInvalidCredentials">testUserLoginWithInvalidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserLoginWithValidCredentials">testUserLoginWithValidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserLogout">testUserLogout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -223,6 +232,185 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginWithEmptyPassword">
+                  </a> <!-- testLoginWithEmptyPassword -->
+                  <span class="method-name">testLoginWithEmptyPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at tests.LoginTest.testLoginWithEmptyPassword(LoginTest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify login fails with valid email but empty password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserLoginWithValidCredentials">
+                  </a> <!-- testUserLoginWithValidCredentials -->
+                  <span class="method-name">testUserLoginWithValidCredentials</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login was not successful expected [true] but found [false]
+	at tests.LoginTest.testUserLoginWithValidCredentials(LoginTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify user can login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserLogout">
+                  </a> <!-- testUserLogout -->
+                  <span class="method-name">testUserLogout</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.className: ico-logout&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.BasePage.waitForElementToBeClickable(BasePage.java:43)
+	at pages.LoginPage.clickLogout(LoginPage.java:84)
+	at tests.LoginTest.testUserLogout(LoginTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-logout&quot;}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25d0b77f260c00391213671a1906e1f6, findElement {using=class name, value=ico-logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chenn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63207}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63207/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25d0b77f260c00391213671a1906e1f6
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy36.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 34 more
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify user can logout successfully)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful logout&quot;, &quot;User Login&quot;)">
+                  </a> <!-- runScenario("Successful logout", "User Login") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful logout","User Login")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.className: ico-logout&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.BasePage.waitForElementToBeClickable(BasePage.java:43)
+	at pages.LoginPage.clickLogout(LoginPage.java:84)
+	at stepdefinitions.LoginSteps.i_click_the_logout_link(LoginSteps.java:47)
+	at ✽.I click the logout link(file:///C:/Users/chenn/eclipse-workspace/NOP_COMMERCE/src/test/java/features/login.feature:23)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-logout&quot;}
+  (Session info: chrome=140.0.7339.81)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b346b55d13084b885866faa2baf5928, findElement {using=class name, value=ico-logout}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chenn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62845}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62845/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b346b55d13084b885866faa2baf5928
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy36.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at pages.BasePage.waitForElementToBeClickable(BasePage.java:43)
+	at pages.LoginPage.clickLogout(LoginPage.java:84)
+	at stepdefinitions.LoginSteps.i_click_the_logout_link(LoginSteps.java:47)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login&quot;)">
+                  </a> <!-- runScenario("Successful login with valid credentials", "User Login") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful login with valid credentials","User Login")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at stepdefinitions.LoginSteps.i_should_see_the_logout_link(LoginSteps.java:52)
+	at ✽.I should see the logout link(file:///C:/Users/chenn/eclipse-workspace/NOP_COMMERCE/src/test/java/features/login.feature:11)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -293,38 +481,11 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoginWithEmptyPassword">
-                  </a> <!-- testLoginWithEmptyPassword -->
-                  <span class="method-name">testLoginWithEmptyPassword</span>
-                  <em>
-(Verify login fails with valid email but empty password)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testUserLoginWithInvalidCredentials">
                   </a> <!-- testUserLoginWithInvalidCredentials -->
                   <span class="method-name">testUserLoginWithInvalidCredentials</span>
                   <em>
 (Verify login fails with invalid credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUserLoginWithValidCredentials">
-                  </a> <!-- testUserLoginWithValidCredentials -->
-                  <span class="method-name">testUserLoginWithValidCredentials</span>
-                  <em>
-(Verify user can login with valid credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUserLogout">
-                  </a> <!-- testUserLogout -->
-                  <span class="method-name">testUserLogout</span>
-                  <em>
-(Verify user can logout successfully)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -354,6 +515,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Successful registration with valid credentials&quot;, &quot;User Registration&quot;)">
+                  </a> <!-- runScenario("Successful registration with valid credentials", "User Registration") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful registration with valid credentials","User Registration")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Registration with password mismatch should fail&quot;, &quot;User Registration&quot;)">
                   </a> <!-- runScenario("Registration with password mismatch should fail", "User Registration") -->
                   <span class="method-name">runScenario</span>
@@ -374,40 +545,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Successful registration with valid credentials&quot;, &quot;User Registration&quot;)">
-                  </a> <!-- runScenario("Successful registration with valid credentials", "User Registration") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Successful registration with valid credentials","User Registration")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Registration with existing email should fail&quot;, &quot;User Registration&quot;)">
                   </a> <!-- runScenario("Registration with existing email should fail", "User Registration") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Registration with existing email should fail","User Registration")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("Successful login with valid credentials", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Successful login with valid credentials","User Login")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Successful logout&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("Successful logout", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Successful logout","User Login")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -535,96 +676,96 @@ data.addRows(22);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 20904);
+data.setCell(0, 3, 60617);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.TestRunner')
-data.setCell(1, 3, 14258);
+data.setCell(1, 3, 52290);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'runner.TestRunner')
-data.setCell(2, 3, 13490);
+data.setCell(2, 1, 'testUserLoginWithValidCredentials')
+data.setCell(2, 2, 'tests.LoginTest')
+data.setCell(2, 3, 33504);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'runner.TestRunner')
-data.setCell(3, 3, 11569);
+data.setCell(3, 1, 'testUserLogout')
+data.setCell(3, 2, 'tests.LoginTest')
+data.setCell(3, 3, 32471);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'runner.TestRunner')
-data.setCell(4, 3, 11092);
+data.setCell(4, 3, 23777);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'runScenario')
-data.setCell(5, 2, 'runner.TestRunner')
-data.setCell(5, 3, 10889);
+data.setCell(5, 1, 'testProceedToCheckoutFromCart')
+data.setCell(5, 2, 'tests.CartTest')
+data.setCell(5, 3, 18325);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testProceedToCheckoutFromCart')
-data.setCell(6, 2, 'tests.CartTest')
-data.setCell(6, 3, 5634);
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'runner.TestRunner')
+data.setCell(6, 3, 16138);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testUserRegistrationWithExistingEmail')
-data.setCell(7, 2, 'tests.RegisterTest')
-data.setCell(7, 3, 5347);
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'runner.TestRunner')
+data.setCell(7, 3, 12545);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testUserRegistrationWithWeakPassword')
-data.setCell(8, 2, 'tests.RegisterTest')
-data.setCell(8, 3, 5011);
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'runner.TestRunner')
+data.setCell(8, 3, 10585);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testAddConfigurableProductToCart')
-data.setCell(9, 2, 'tests.ProductTest')
-data.setCell(9, 3, 3520);
+data.setCell(9, 1, 'testUserRegistrationWithValidCredentials')
+data.setCell(9, 2, 'tests.RegisterTest')
+data.setCell(9, 3, 3156);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testUserRegistrationWithValidCredentials')
-data.setCell(10, 2, 'tests.RegisterTest')
-data.setCell(10, 3, 3484);
+data.setCell(10, 1, 'testAddConfigurableProductToCart')
+data.setCell(10, 2, 'tests.ProductTest')
+data.setCell(10, 3, 3008);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testUserLogout')
-data.setCell(11, 2, 'tests.LoginTest')
-data.setCell(11, 3, 3399);
+data.setCell(11, 1, 'testProductSearchFunctionality')
+data.setCell(11, 2, 'tests.ProductTest')
+data.setCell(11, 3, 2684);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testAddSimpleProductToCartFromCategory')
-data.setCell(12, 2, 'tests.ProductTest')
-data.setCell(12, 3, 2495);
+data.setCell(12, 1, 'testUserRegistrationWithExistingEmail')
+data.setCell(12, 2, 'tests.RegisterTest')
+data.setCell(12, 3, 2654);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testUserLoginWithValidCredentials')
-data.setCell(13, 2, 'tests.LoginTest')
-data.setCell(13, 3, 2411);
+data.setCell(13, 1, 'testUserRegistrationWithWeakPassword')
+data.setCell(13, 2, 'tests.RegisterTest')
+data.setCell(13, 3, 2594);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testUserRegistrationWithPasswordMismatch')
-data.setCell(14, 2, 'tests.RegisterTest')
-data.setCell(14, 3, 2307);
+data.setCell(14, 1, 'testAddSimpleProductToCartFromCategory')
+data.setCell(14, 2, 'tests.ProductTest')
+data.setCell(14, 3, 2571);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testViewProductDetails')
-data.setCell(15, 2, 'tests.ProductTest')
-data.setCell(15, 3, 2080);
+data.setCell(15, 1, 'testUserRegistrationWithPasswordMismatch')
+data.setCell(15, 2, 'tests.RegisterTest')
+data.setCell(15, 3, 2286);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testProductSearchFunctionality')
-data.setCell(16, 2, 'tests.ProductTest')
-data.setCell(16, 3, 1895);
+data.setCell(16, 1, 'testLoginWithEmptyPassword')
+data.setCell(16, 2, 'tests.LoginTest')
+data.setCell(16, 3, 1945);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'testUserLoginWithInvalidCredentials')
 data.setCell(17, 2, 'tests.LoginTest')
-data.setCell(17, 3, 1880);
+data.setCell(17, 3, 1918);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testLoginWithEmptyPassword')
-data.setCell(18, 2, 'tests.LoginTest')
-data.setCell(18, 3, 1874);
+data.setCell(18, 1, 'testProductFilterFunctionality')
+data.setCell(18, 2, 'tests.ProductTest')
+data.setCell(18, 3, 1483);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'testProductFilterFunctionality')
-data.setCell(19, 2, 'tests.ProductTest')
-data.setCell(19, 3, 1442);
+data.setCell(19, 1, 'testLoginWithEmptyCredentials')
+data.setCell(19, 2, 'tests.LoginTest')
+data.setCell(19, 3, 1130);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'testUserRegistrationWithEmptyFields')
 data.setCell(20, 2, 'tests.RegisterTest')
-data.setCell(20, 3, 1196);
+data.setCell(20, 3, 936);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'testLoginWithEmptyCredentials')
-data.setCell(21, 2, 'tests.LoginTest')
-data.setCell(21, 3, 1125);
+data.setCell(21, 1, 'testViewProductDetails')
+data.setCell(21, 2, 'tests.ProductTest')
+data.setCell(21, 3, 881);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -695,247 +836,257 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@72cb5d7d)</span>
-                <span class="method-start">631 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@413773e6)</span>
+                <span class="method-start">516 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Successful login with valid credentials", "User Login")</span>
-                <span class="method-start">1871 ms</span>
+                <span class="method-start">1786 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with invalid credentials should fail", "User Login")</span>
-                <span class="method-start">22782 ms</span>
+                <span class="method-start">62413 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Successful logout", "User Login")</span>
-                <span class="method-start">37041 ms</span>
+                <span class="method-start">73000 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Successful registration with valid credentials", "User Registration")</span>
-                <span class="method-start">50532 ms</span>
+                <span class="method-start">125318 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Registration with existing email should fail", "User Registration")</span>
-                <span class="method-start">61625 ms</span>
+                <span class="method-start">149097 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Registration with password mismatch should fail", "User Registration")</span>
-                <span class="method-start">72514 ms</span>
+                <span class="method-start">165237 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">84089 ms</span>
+                <span class="method-start">177795 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.CartTest.testProceedToCheckoutFromCart())</span>
-                <span class="method-start">84219 ms</span>
+                <span class="method-start">178064 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testProceedToCheckoutFromCart</span>
-                <span class="method-start">90050 ms</span>
+                <span class="method-start">184523 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testProceedToCheckoutFromCart status=SUCCESS method=CartTest.testProceedToCheckoutF...)</span>
-                <span class="method-start">95688 ms</span>
+                <span class="method-start">202851 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.LoginTest.testUserLoginWithValidCredentials())</span>
-                <span class="method-start">96261 ms</span>
+                <span class="method-start">204869 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testUserLoginWithValidCredentials</span>
-                <span class="method-start">99264 ms</span>
+                <span class="method-start">209046 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testUserLoginWithValidCredentials status=SUCCESS method=LoginTest.testUserLoginWith...)</span>
-                <span class="method-start">101676 ms</span>
+                <span class="method-name">tearDown([TestResult name=testUserLoginWithValidCredentials status=FAILURE method=LoginTest.testUserLoginWith...)</span>
+                <span class="method-start">242552 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.LoginTest.testUserLoginWithInvalidCredentials())</span>
-                <span class="method-start">102455 ms</span>
+                <span class="method-start">243216 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserLoginWithInvalidCredentials</span>
-                <span class="method-start">105312 ms</span>
+                <span class="method-start">247242 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserLoginWithInvalidCredentials status=SUCCESS method=LoginTest.testUserLoginWi...)</span>
-                <span class="method-start">107192 ms</span>
+                <span class="method-start">249162 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.LoginTest.testUserLogout())</span>
-                <span class="method-start">109636 ms</span>
+                <span class="method-start">249724 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testUserLogout</span>
-                <span class="method-start">113185 ms</span>
+                <span class="method-start">254030 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testUserLogout status=SUCCESS method=LoginTest.testUserLogout()[pri:3, instance:tes...)</span>
-                <span class="method-start">116585 ms</span>
+                <span class="method-name">tearDown([TestResult name=testUserLogout status=FAILURE method=LoginTest.testUserLogout()[pri:3, instance:tes...)</span>
+                <span class="method-start">286504 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.LoginTest.testLoginWithEmptyCredentials())</span>
-                <span class="method-start">117304 ms</span>
+                <span class="method-start">287055 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLoginWithEmptyCredentials</span>
-                <span class="method-start">124444 ms</span>
+                <span class="method-start">291275 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testLoginWithEmptyCredentials status=SUCCESS method=LoginTest.testLoginWithEmptyCre...)</span>
-                <span class="method-start">125569 ms</span>
+                <span class="method-start">292406 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.LoginTest.testLoginWithEmptyPassword())</span>
-                <span class="method-start">126083 ms</span>
+                <span class="method-start">292907 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testLoginWithEmptyPassword</span>
-                <span class="method-start">128771 ms</span>
+                <span class="method-start">295828 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testLoginWithEmptyPassword status=SUCCESS method=LoginTest.testLoginWithEmptyPasswo...)</span>
-                <span class="method-start">130646 ms</span>
+                <span class="method-name">tearDown([TestResult name=testLoginWithEmptyPassword status=FAILURE method=LoginTest.testLoginWithEmptyPasswo...)</span>
+                <span class="method-start">297774 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.ProductTest.testViewProductDetails())</span>
-                <span class="method-start">131228 ms</span>
+                <span class="method-start">298318 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testViewProductDetails</span>
-                <span class="method-start">134569 ms</span>
+                <span class="method-start">301303 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testViewProductDetails status=SUCCESS method=ProductTest.testViewProductDetails()[p...)</span>
-                <span class="method-start">136651 ms</span>
+                <span class="method-start">302184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.ProductTest.testAddConfigurableProductToCart())</span>
-                <span class="method-start">137344 ms</span>
+                <span class="method-start">302790 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddConfigurableProductToCart</span>
-                <span class="method-start">141821 ms</span>
+                <span class="method-start">306265 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testAddConfigurableProductToCart status=SUCCESS method=ProductTest.testAddConfigura...)</span>
-                <span class="method-start">145343 ms</span>
+                <span class="method-start">309273 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.ProductTest.testAddSimpleProductToCartFromCategory())</span>
-                <span class="method-start">146154 ms</span>
+                <span class="method-start">309977 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddSimpleProductToCartFromCategory</span>
-                <span class="method-start">149362 ms</span>
+                <span class="method-start">312797 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testAddSimpleProductToCartFromCategory status=SUCCESS method=ProductTest.testAddSim...)</span>
-                <span class="method-start">151858 ms</span>
+                <span class="method-start">315369 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.ProductTest.testProductSearchFunctionality())</span>
-                <span class="method-start">154945 ms</span>
+                <span class="method-start">316347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testProductSearchFunctionality</span>
-                <span class="method-start">158068 ms</span>
+                <span class="method-start">319072 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testProductSearchFunctionality status=SUCCESS method=ProductTest.testProductSearchF...)</span>
-                <span class="method-start">159963 ms</span>
+                <span class="method-start">321756 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.ProductTest.testProductFilterFunctionality())</span>
-                <span class="method-start">160618 ms</span>
+                <span class="method-start">322223 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testProductFilterFunctionality</span>
-                <span class="method-start">165112 ms</span>
+                <span class="method-start">325700 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testProductFilterFunctionality status=SUCCESS method=ProductTest.testProductFilterF...)</span>
-                <span class="method-start">166554 ms</span>
+                <span class="method-start">327183 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.RegisterTest.testUserRegistrationWithValidCredentials())</span>
-                <span class="method-start">167329 ms</span>
+                <span class="method-start">327695 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserRegistrationWithValidCredentials</span>
-                <span class="method-start">173123 ms</span>
+                <span class="method-start">330669 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserRegistrationWithValidCredentials status=SUCCESS method=RegisterTest.testUse...)</span>
-                <span class="method-start">176608 ms</span>
+                <span class="method-start">333825 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.RegisterTest.testUserRegistrationWithExistingEmail())</span>
-                <span class="method-start">177147 ms</span>
+                <span class="method-start">336592 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserRegistrationWithExistingEmail</span>
-                <span class="method-start">181042 ms</span>
+                <span class="method-start">339300 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserRegistrationWithExistingEmail status=SUCCESS method=RegisterTest.testUserRe...)</span>
-                <span class="method-start">186391 ms</span>
+                <span class="method-start">341954 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.RegisterTest.testUserRegistrationWithPasswordMismatch())</span>
-                <span class="method-start">187084 ms</span>
+                <span class="method-start">342577 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserRegistrationWithPasswordMismatch</span>
-                <span class="method-start">190340 ms</span>
+                <span class="method-start">345110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserRegistrationWithPasswordMismatch status=SUCCESS method=RegisterTest.testUse...)</span>
-                <span class="method-start">192648 ms</span>
+                <span class="method-start">347396 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.RegisterTest.testUserRegistrationWithWeakPassword())</span>
-                <span class="method-start">193127 ms</span>
+                <span class="method-start">347799 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserRegistrationWithWeakPassword</span>
-                <span class="method-start">197146 ms</span>
+                <span class="method-start">351265 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserRegistrationWithWeakPassword status=SUCCESS method=RegisterTest.testUserReg...)</span>
-                <span class="method-start">202158 ms</span>
+                <span class="method-start">353860 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome, public void tests.RegisterTest.testUserRegistrationWithEmptyFields())</span>
-                <span class="method-start">202767 ms</span>
+                <span class="method-start">354367 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUserRegistrationWithEmptyFields</span>
-                <span class="method-start">206273 ms</span>
+                <span class="method-start">357441 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=testUserRegistrationWithEmptyFields status=SUCCESS method=RegisterTest.testUserRegi...)</span>
-                <span class="method-start">207470 ms</span>
+                <span class="method-start">358377 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownSuite</span>
-                <span class="method-start">208070 ms</span>
+                <span class="method-start">358943 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
