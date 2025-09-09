@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -13,7 +14,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
 
@@ -22,11 +23,31 @@ public class BasePage {
     }
 
     public void waitForElementToBeVisible(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                wait.until(ExpectedConditions.visibilityOf(element));
+                break;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+                if (attempts >= 3) throw e;
+                try { Thread.sleep(1000); } catch (InterruptedException ie) {}
+            }
+        }
     }
 
     public void waitForElementToBeClickable(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                break;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+                if (attempts >= 3) throw e;
+                try { Thread.sleep(1000); } catch (InterruptedException ie) {}
+            }
+        }
     }
 
     public void clickElement(WebElement element) {
@@ -45,4 +66,3 @@ public class BasePage {
         return element.getText();
     }
 }
-

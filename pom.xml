@@ -68,11 +68,6 @@
 			<version>5.0.9</version>
 		</dependency>
 		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports-testng-adapter</artifactId>
-			<version>1.2.2</version> <!-- or latest -->
-		</dependency>
-		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.14.0</version>

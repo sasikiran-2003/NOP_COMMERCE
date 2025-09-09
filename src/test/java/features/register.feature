@@ -8,9 +8,9 @@ Feature: User Registration
     When I select gender "Male"
     And I enter first name "John"
     And I enter last name "Doe"
-    And I enter email "johndoe@example.com"
+    And I enter register email "johndoe12311@example.com"
     And I enter company name "ABC Company"
-    And I enter password "password123"
+    And I enter register password "password123"
     And I enter confirm password "password123"
     And I click the register button
     Then I should see the registration success message
@@ -21,9 +21,9 @@ Feature: User Registration
     When I select gender "Female"
     And I enter first name "Jane"
     And I enter last name "Doe"
-    And I enter email "existing@example.com"
+    And I enter register email "johndoe12311@example.com"
     And I enter company name "XYZ Company"
-    And I enter password "password123"
+    And I enter register password "password123"
     And I enter confirm password "password123"
     And I click the register button
     Then I should see an error message about existing email
@@ -33,9 +33,9 @@ Feature: User Registration
     When I select gender "Male"
     And I enter first name "Bob"
     And I enter last name "Smith"
-    And I enter email "bobsmith@example.com"
+    And I enter register email "bobsmith@example.com"
     And I enter company name "Test Company"
-    And I enter password "password123"
+    And I enter register password "password123"
     And I enter confirm password "differentpassword"
     And I click the register button
     Then I should see an error message about password mismatch

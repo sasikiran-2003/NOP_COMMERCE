@@ -5,30 +5,18 @@
   <listeners>
     <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>
   </listeners>
-  <test thread-count="1" parallel="tests" name="Register Tests(failed)">
+  <test thread-count="1" parallel="tests" name="Login Tests(failed)">
     <classes>
-      <class name="tests.RegisterTest">
+      <class name="tests.LoginTest">
         <methods>
           <include name="tearDownSuite"/>
           <include name="setUpSuite"/>
-          <include name="testUserRegistrationWithWeakPassword"/>
-          <include name="testUserRegistrationWithEmptyFields"/>
-          <include name="testUserRegistrationWithPasswordMismatch"/>
+          <include name="testLoginWithEmptyCredentials"/>
+          <include name="testLoginWithEmptyPassword"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.RegisterTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
-  </test> <!-- Register Tests(failed) -->
-  <test thread-count="1" parallel="tests" name="Cucumber Feature Tests(failed)">
-    <classes>
-      <class name="runner.TestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2 3 4 5"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- runner.TestRunner -->
-    </classes>
-  </test> <!-- Cucumber Feature Tests(failed) -->
+  </test> <!-- Login Tests(failed) -->
 </suite> <!-- Failed suite [nopCommerce Test Suite] -->

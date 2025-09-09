@@ -3,7 +3,5 @@ pages\BasePage.class
 pages\ProductPage.class
 pages\LoginPage.class
 pages\CartPage.class
-pages\CheckoutPage.class
 utils\PropertyReader.class
-pages\CheckoutPage$1.class
 pages\RegisterPage.class

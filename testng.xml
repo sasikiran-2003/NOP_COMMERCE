@@ -31,5 +31,11 @@
 			<class name="tests.CartTest" />
 		</classes>
 	</test>
+	
+	 <test name="Cucumber Tests">
+    <classes>
+      <class name="runner.TestRunner"/>
+    </classes>
+  </test>
 
 </suite>

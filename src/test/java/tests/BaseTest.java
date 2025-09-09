@@ -69,7 +69,36 @@ public class BaseTest {
             options.addArguments("start-maximized");
             options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
                     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36");
+         // ✅ Add stability options
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-web-security");
+            options.addArguments("--disable-features=VizDisplayCompositor");
+            options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.addArguments("--start-maximized");
+            
+            // ✅ Add user agent
+            options.addArguments("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
+            
+            // ✅ Set page load strategy
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             driver = new ChromeDriver(options);
+            
+         // ✅ Increase timeouts
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+            driver.manage().window().maximize();
+            
+            wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            
+            try {
+                driver.get(PropertyReader.getProperty("url"));
+            } catch (Exception e) {
+                System.out.println("Failed to load initial URL: " + e.getMessage());
+            }
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -87,11 +116,9 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown(ITestResult result) {
-        ExtentTest logger = extentTest.get(); // Avoid NPE
-
-        if (logger == null) {
-            System.err.println("⚠️ ExtentTest is null. Skipping logging for: " + result.getName());
-        } else {
+        ExtentTest logger = extentTest.get();
+        
+        if (logger != null) {
             String status;
             switch (result.getStatus()) {
                 case ITestResult.FAILURE:
@@ -100,13 +127,11 @@ public class BaseTest {
                     logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
                     logger.log(Status.FAIL, MarkupHelper.createLabel("Failure Reason: " + result.getThrowable(), ExtentColor.RED));
                     break;
-
                 case ITestResult.SKIP:
                     status = "SKIP";
                     captureScreenshot(result.getName(), status);
                     logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
                     break;
-
                 case ITestResult.SUCCESS:
                     status = "SUCCESS";
                     captureScreenshot(result.getName(), status);
@@ -114,11 +139,27 @@ public class BaseTest {
                     break;
             }
         }
-
+        
+        // ✅ Enhanced cleanup
         if (driver != null) {
-            driver.quit();
+            try {
+                driver.manage().deleteAllCookies();
+                driver.quit();
+            } catch (Exception e) {
+                System.out.println("Error during driver cleanup: " + e.getMessage());
+                // Force kill if needed
+                try {
+                    if (driver != null) {
+                        ((ChromeDriver) driver).quit();
+                    }
+                } catch (Exception ex) {
+                    System.out.println("Force quit failed: " + ex.getMessage());
+                }
+            }
+            driver = null;
         }
     }
+
 
     private void captureScreenshot(String testName, String status) {
         try {
