@@ -55,7 +55,7 @@ pipeline {
                             git diff --cached --quiet || git commit -m "${COMMIT_MESSAGE}"
  
                             REM Push using token
-                            git push https://%GIT_USER%:%GIT_TOKEN%@github.com/sasikiran-2003/NOP_COMMERCE.git${BRANCH_NAME}
+                            git push https://%GIT_USER%:%GIT_TOKEN%@github.com/sasikiran-2003/NOP_COMMERCE.git ${BRANCH_NAME}
                         """
                     }
                 }
