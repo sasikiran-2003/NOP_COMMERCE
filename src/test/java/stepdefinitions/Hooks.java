@@ -61,7 +61,7 @@ public class Hooks {
         if (driver != null) {
             try {
                 driver.manage().deleteAllCookies();
-                driver.quit();
+                driver.close();
                 System.out.println("✅ WebDriver closed successfully");
             } catch (Exception e) {
                 System.err.println("⚠️ Error during driver cleanup: " + e.getMessage());
